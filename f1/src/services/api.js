@@ -1,5 +1,5 @@
 // const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const BACKEND_URL = 'https://website-five-tau-37.vercel.app';
+const BACKEND_URL = 'https://backend-blond-gamma-18.vercel.app';
 const API_BASE = `${BACKEND_URL}/api`;
 
 // API service functions
