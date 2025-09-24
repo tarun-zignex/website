@@ -31,7 +31,15 @@ class ApiService {
 
   // Company Information
   static async fetchCompanyInfo() {
-    return this.request('/company-info');
+    return {
+      "name":"ZignEx",
+        "tagline":"Converging and Evolving...",
+        "motto":'Powered by "Your Imagination and Your Need" ™',
+        "headquarters":"The Woodlands, TX, USA",
+        "description":"ZignEx is a forward-looking logistics software company focused on providing Enterprise Business Values by designing and developing products and solutions that are critical for the highly competitive business landscape of the 21st century and beyond.",
+        "vision":"To use data analytics to gain business intelligence, optimize business processes, continuously improve customer experience, and create exceptional business value for forward-thinking enterprises.",
+        "technologies":["Operations Research", "Advanced Analytics", "Data Science"]
+    }
   }
 
   // Services

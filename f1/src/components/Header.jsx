@@ -3,7 +3,7 @@ import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { Menu, Truck, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from "./zignex_logo_tag.JPG"; // import it
+import logo from "./zignex_logo.png"; // import it
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,7 @@ export const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <div>
-               <img src={logo} alt="ZignEx Logo" className="h-11 w-24" />
+               <img src={logo} alt="ZignEx Logo" className="h-9 w-24" />
               {/* <p className="text-[0.5rem] text-blue-700 font-medium">Powered By "Your Imagination and Your Need" </p> */}
             </div>
           </Link>

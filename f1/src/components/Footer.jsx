@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Truck, Phone, Mail, MapPin, Linkedin, Globe, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ApiService from '../services/api';
+import logo from "./zignex_logo.png"; // import it
 
 export const Footer = () => {
   const [companyInfo, setCompanyInfo] = useState(null);
@@ -33,17 +34,10 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="p-2 bg-blue-700 rounded-lg">
-                <Truck className="h-6 w-6 text-white" />
+            <div>
+               <img src={logo} alt="ZignEx Logo" className="h-9 w-24" />
               </div>
-              {/* <div>
-                <span className="text-2xl font-bold text-white">ZignEx</span>
-                <p className="text-xs text-orange-400 font-medium">Logistics Solutions</p>
-              </div> */}
-              <div>
-                <span className="text-2xl font-bold text-white">ZignEx</span>
-                <p className="text-xs text-orange-400 font-medium">Logistics Solutions</p>
-              </div>
+            
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
               {companyInfo?.motto || 'Powered by "Your Imagination and Your Need" ™'}
