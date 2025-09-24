@@ -1,5 +1,5 @@
 // const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const BACKEND_URL = 'http://127.0.0.1:8000';
+const BACKEND_URL = 'https://website-git-main-tarun-zignexs-projects.vercel.app/';
 const API_BASE = `${BACKEND_URL}/api`;
 
 // API service functions
