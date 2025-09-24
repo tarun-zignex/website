@@ -22,21 +22,27 @@ db = None
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-     global client, db
     """Lifespan handler for startup and shutdown events"""
+    global client, db
     # Startup logic
-    logger.info("Starting ZignEx API server...")
+    logger.info("🚀 Starting ZignEx API server...")
+
     try:
+        mongo_url = os.environ["MONGO_URL"]
+        client = AsyncIOMotorClient(mongo_url)
+        db = client[os.environ["DB_NAME"]]
+
         await seed_initial_data()
         logger.info("✅ Database initialization completed")
     except Exception as e:
         logger.error(f"❌ Database initialization failed: {str(e)}")
-    
+
     yield  # app is now running
 
     # Shutdown logic
-    logger.info("Shutting down ZignEx API server...")
-    client.close()
+    logger.info("🛑 Shutting down ZignEx API server...")
+    if client:
+        client.close()
 
 
 
